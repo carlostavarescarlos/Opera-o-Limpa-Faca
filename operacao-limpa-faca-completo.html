@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operação Limpa Faca - PF desarticula quadrilha de contrabando em Vitória</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Breaking News Banner */
+.breaking-news-banner {
+    background: linear-gradient(90deg, #c00 0%, #ff0000 50%, #c00 100%);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 2px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+/* Header */
+header {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.logo .tagline {
+    font-size: 12px;
+    color: #999;
+    font-style: italic;
+}
+
+.date-time {
+    font-size: 14px;
+    color: #999;
+}
+
+/* Main Content */
+main {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+/* Article */
+.news-article {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.category-badge {
+    display: inline-block;
+    background-color: #c00;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.headline {
+    font-family: 'Merriweather', serif;
+    font-size: 36px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+.article-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.separator {
+    color: #ccc;
+}
+
+.featured-image {
+    margin-bottom: 30px;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.image-caption {
+    font-size: 13px;
+    color: #666;
+    font-style: italic;
+}
+
+.article-content {
+    font-size: 17px;
+    line-height: 1.75;
+    color: #333;
+}
+
+.lead {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: 400;
+}
+
+.article-content h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 24px;
+    margin-top: 35px;
+    margin-bottom: 18px;
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+.article-content p {
+    margin-bottom: 20px;
+}
+
+/* Highlight Box */
+.highlight-box {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 4px;
+}
+
+.highlight-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #856404;
+}
+
+.highlight-box p {
+    color: #856404;
+    margin-bottom: 0;
+}
+
+/* Alert Box */
+.alert-box {
+    background-color: #f8d7da;
+    border-left: 4px solid #dc3545;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 4px;
+}
+
+.alert-box h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #721c24;
+}
+
+.alert-box p {
+    color: #721c24;
+    margin-bottom: 15px;
+}
+
+.alert-note {
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 0 !important;
+}
+
+/* Related Box */
+.related-box {
+    background-color: #e7f3ff;
+    border-left: 4px solid #2196F3;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 4px;
+}
+
+.related-box h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #0d47a1;
+}
+
+.related-box ul {
+    list-style: none;
+    color: #0d47a1;
+}
+
+.related-box li {
+    padding: 8px 0;
+    font-size: 16px;
+}
+
+/* Criminals List */
+.criminals-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.criminal-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: box-shadow 0.3s;
+}
+
+.criminal-card:hover {
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.criminal-card.fugitive {
+    border-color: #dc3545;
+    background-color: #fff5f5;
+}
+
+.criminal-photo {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+    border: 2px solid #ddd;
+}
+
+.criminal-icon {
+    font-size: 60px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.criminal-info {
+    flex: 1;
+    text-align: left;
+}
+
+.criminal-card h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+.criminal-role {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.status-free {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-fugitive {
+    background-color: #f8d7da;
+    color: #721c24;
+    animation: blink 1.5s infinite;
+}
+
+.status-investigating {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Blockquote */
+blockquote {
+    border-left: 4px solid #2196F3;
+    padding-left: 20px;
+    margin: 30px 0;
+    font-style: italic;
+    color: #555;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #888;
+    font-style: normal;
+}
+
+/* Footer Note */
+.footer-note {
+    background-color: #e8f5e9;
+    border: 2px solid #4caf50;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.footer-note p {
+    color: #2e7d32;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+/* Share Section */
+.share-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid #e0e0e0;
+}
+
+.share-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.share-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.share-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.share-btn:hover {
+    transform: scale(1.05);
+}
+
+.share-btn.whatsapp {
+    background-color: #25D366;
+    color: white;
+}
+
+.share-btn.facebook {
+    background-color: #1877f2;
+    color: white;
+}
+
+.share-btn.twitter {
+    background-color: #1DA1F2;
+    color: white;
+}
+
+.share-btn.copy {
+    background-color: #666;
+    color: white;
+}
+
+/* Sidebar */
+.sidebar {
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
+
+.related-news {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.related-news h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.related-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.related-item:last-child {
+    border-bottom: none;
+}
+
+.related-item p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+.disclaimer {
+    font-size: 12px;
+    color: #999;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+    }
+
+    .headline {
+        font-size: 32px;
+    }
+
+    .news-article {
+        padding: 20px;
+    }
+
+    .criminals-list {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .criminals-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .headline {
+        font-size: 24px;
+    }
+
+    .article-content {
+        font-size: 16px;
+    }
+
+    .lead {
+        font-size: 18px;
+    }
+
+    .criminals-list {
+        grid-template-columns: 1fr;
+    }
+
+    .criminal-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .criminal-info {
+        text-align: center;
+    }
+
+    header .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .share-buttons {
+        flex-direction: column;
+    }
+
+    .share-btn {
+        width: 100%;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="breaking-news-banner">
+        🚨 ÚLTIMA HORA 🚨
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>NOTÍCIAS ES</h1>
+                <p class="tagline">A verdade que você não esperava</p>
+            </div>
+            <div class="date-time" id="datetime"></div>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="news-article">
+            <div class="category-badge">POLÍCIA</div>
+            
+            <h1 class="headline">Polícia Federal desarticula quadrilha de contrabando de facas e lavagem de dinheiro em Vitória e Macaé</h1>
+            
+            <div class="article-meta">
+                <span class="author">Por Redação Notícias ES</span>
+                <span class="separator">•</span>
+                <span class="publish-date">Publicado há 2 horas</span>
+                <span class="separator">•</span>
+                <span class="reading-time">⏱️ 3 min de leitura</span>
+            </div>
+
+            <div class="featured-image">
+                <img src="https://cdn1.genspark.ai/user-upload-image/5_generated/678aa5a6-d586-4c2e-a8d9-f93b2fdce0e3.jpeg" alt="Material apreendido na Operação Limpa Faca" class="main-image">
+                <p class="image-caption">Material apreendido: facas personalizadas, celulares, dinheiro e objetos de luxo com temática de crustáceos | Foto: Divulgação/PF</p>
+            </div>
+
+            <div class="article-content">
+                <p class="lead">
+                    Em uma operação que surpreendeu moradores de Vitória (ES) e Macaé (RJ), a Polícia Federal deflagrou na manhã desta quinta-feira a <strong>"Operação Limpa Faca"</strong>, que resultou na prisão de membros de uma sofisticada organização criminosa especializada no <strong>contrabando internacional de facas, lavagem de dinheiro e contrabando de guaiamum e caranguejo</strong>.
+                </p>
+
+                <h2>Conexão Marítima</h2>
+                <p>
+                    Segundo investigações da PF, a quadrilha tinha como principais alvos funcionários do navio de perfuração <strong>Atlantic Zonda</strong>, que foram cooptados para participar do esquema ilícito. Os criminosos aproveitavam as rotas marítimas da embarcação para transportar mercadorias ilegais entre diversos países.
+                </p>
+
+                <div class="highlight-box">
+                    <h3>⚠️ Expansão Internacional e Lavagem de Dinheiro</h3>
+                    <p>O grupo já havia expandido suas operações para diversas cidades do Espírito Santo e Rio de Janeiro, especialmente nas regiões de <strong>Vitória e Macaé</strong>. Segundo a PF, a organização mantinha até mesmo um representante na <strong>Indonésia</strong> e operava um esquema sofisticado de <strong>lavagem de dinheiro</strong> proveniente do contrabando de facas e crustáceos.</p>
+                </div>
+
+                <h2>A Estrutura da Organização Criminosa</h2>
+                <p>
+                    A Polícia Federal identificou a hierarquia da organização criminosa, que operava como uma verdadeira empresa do crime:
+                </p>
+
+                <div class="criminals-list">
+                    <div class="criminal-card">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/ef2431a60059235ef7c6fc501e75aa06" alt="Formigão - capote cinza" class="criminal-photo">
+                        <div class="criminal-info">
+                            <h4>Ivanuel "Formigão"</h4>
+                            <p class="criminal-role">CEO da Organização</p>
+                            <span class="status status-free">Responderá em liberdade</span>
+                        </div>
+                    </div>
+
+                    <div class="criminal-card fugitive">
+                        <div class="criminal-icon">👤</div>
+                        <div class="criminal-info">
+                            <h4>Jefferson "Pino"</h4>
+                            <p class="criminal-role">Líder da Área Internacional</p>
+                            <span class="status status-fugitive">🚨 FORAGIDO</span>
+                        </div>
+                    </div>
+
+                    <div class="criminal-card">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/aadae4f9fd84ecf5cd38567017e63180" alt="Caranguejo - camisa do Bahia" class="criminal-photo">
+                        <div class="criminal-info">
+                            <h4>Mathias "Caranguejo"</h4>
+                            <p class="criminal-role">Diretor da Empresa</p>
+                            <span class="status status-free">Responderá em liberdade</span>
+                        </div>
+                    </div>
+
+                    <div class="criminal-card">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/1a0cf67ad124d336afb900f7e1caecc0" alt="Primo - camisa azul social" class="criminal-photo">
+                        <div class="criminal-info">
+                            <h4>Misael "Primo"</h4>
+                            <p class="criminal-role">Gerente da Empresa</p>
+                            <span class="status status-free">Responderá em liberdade</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Buscas e Apreensões</h2>
+                <p>
+                    Durante a operação, a Polícia Federal realizou <strong>buscas e apreensões nas residências</strong> de todos os investigados, recolhendo documentos, computadores, celulares e evidências do esquema criminoso. Foram apreendidos milhares de reais em espécie, além de joias e veículos de luxo.
+                </p>
+
+                <div class="alert-box">
+                    <h3>💰 Bloqueio de Bens</h3>
+                    <p>
+                        A Justiça Federal determinou o <strong>bloqueio imediato de todos os bens</strong> dos principais investigados, incluindo contas bancárias, imóveis e veículos. Segundo estimativas da PF, o patrimônio bloqueado ultrapassa <strong>R$ 5 milhões</strong>.
+                    </p>
+                </div>
+
+                <h2>Situação Atual dos Principais Investigados</h2>
+                <p>
+                    Apesar da gravidade das acusações, todos os presos no Brasil foram liberados e <strong>responderão em liberdade</strong>. Segundo a PF, não havia condições legais para manter os suspeitos encarcerados.
+                </p>
+
+                <div class="alert-box">
+                    <h3>🚨 Procurado Internacional</h3>
+                    <p>
+                        O suspeito <strong>Jefferson, conhecido como "Pino"</strong>, líder da área internacional da organização e representante na Indonésia, encontra-se <strong>foragido</strong>. A Polícia Federal já solicitou a <strong>suspensão de seu passaporte</strong> junto aos órgãos competentes e aguarda o processo de <strong>extradição</strong> em conjunto com o governo indonésio.
+                    </p>
+                    <p class="alert-note">
+                        Autoridades internacionais foram acionadas através da Interpol para localização do fugitivo. Há informações de que ele pode estar escondido no sudeste asiático.
+                    </p>
+                </div>
+
+                <h2>Outros Investigados</h2>
+                <p>
+                    Além dos quatro principais membros já identificados, a Polícia Federal investiga o envolvimento de outros <strong>três suspeitos</strong> que teriam papel fundamental na operação da quadrilha:
+                </p>
+
+                <div class="criminals-list">
+                    <div class="criminal-card">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/073a1154c7e8d3ab61a54688ef3da721" alt="Sandro - Xabu" class="criminal-photo">
+                        <div class="criminal-info">
+                            <h4>Sandro "Xabu"</h4>
+                            <p class="criminal-role">Operações Financeiras</p>
+                            <span class="status status-investigating">🔍 Sob Investigação</span>
+                        </div>
+                    </div>
+
+                    <div class="criminal-card">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/937ea65a5193b39708f04b0db584a3ab" alt="Jorge Fillete - Bigodinho" class="criminal-photo">
+                        <div class="criminal-info">
+                            <h4>Jorge Fillete "Bigodinho"</h4>
+                            <p class="criminal-role">Logística de Distribuição</p>
+                            <span class="status status-investigating">🔍 Sob Investigação</span>
+                        </div>
+                    </div>
+
+                    <div class="criminal-card">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/565de9ff8e0ee152d96b7a5bf92b0fdb" alt="João - ET" class="criminal-photo">
+                        <div class="criminal-info">
+                            <h4>João "ET"</h4>
+                            <p class="criminal-role">Gerente de Imagens e Marketing Digital</p>
+                            <span class="status status-investigating">🔍 Sob Investigação</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p>
+                    A PF ainda não formalizou denúncia contra esses três suspeitos, mas as investigações seguem em andamento com análise de dispositivos eletrônicos, quebra de sigilo telemático e bancário. Segundo fontes da investigação, há fortes indícios de participação ativa no esquema criminoso.
+                </p>
+
+                <h2>O Esquema Criminoso</h2>
+                <p>
+                    De acordo com o delegado responsável pela operação, a quadrilha operava há pelo menos dois anos, utilizando grupos de mensagens com nomes sugestivos como <strong>"GWI Rifas de Faca"</strong> para realizar as transações ilegais. O grupo também atuava no contrabando de crustáceos (guaiamum e caranguejo) nas regiões de Vitória e Macaé.
+                </p>
+
+                <div class="highlight-box">
+                    <h3>🦀 Descoberta: Expansão para Contrabando de Crustáceos</h3>
+                    <p>Durante as investigações, a PF descobriu que a <strong>Operação Limpa Faca está levando a outra operação</strong> focada no contrabando de guaiamum e caranguejo nas regiões de Macaé e Vitória. Os criminosos utilizavam a mesma estrutura logística e de lavagem de dinheiro para ambos os negócios ilícitos.</p>
+                </div>
+
+                <blockquote>
+                    "Esta organização demonstrava um nível de sofisticação impressionante. Eles utilizavam linguagem codificada, sistemas de 'rifas' para distribuir as mercadorias ilegais, operavam lavagem de dinheiro através de empresas de fachada e mantinham uma rede de contatos que ia do fundo do mar até o sudeste asiático. O esquema de contrabando de crustáceos funcionava paralelamente ao de facas, usando a mesma estrutura criminosa."
+                    <cite>- Delegado Responsável pela Operação</cite>
+                </blockquote>
+
+                <p>
+                    As investigações continuam para identificar possíveis outros envolvidos. A PF não descarta que o grupo possa ter ramificações em outros estados brasileiros e países vizinhos.
+                </p>
+
+                <div class="related-box">
+                    <h3>📊 Números da Operação</h3>
+                    <ul>
+                        <li>✓ 7 pessoas investigadas (4 formalmente acusadas, 3 sob investigação)</li>
+                        <li>✓ 4 mandados de busca e apreensão cumpridos</li>
+                        <li>✓ 3 presos que responderão em liberdade</li>
+                        <li>✓ 1 foragido internacional</li>
+                        <li>✓ R$ 5 milhões em bens bloqueados</li>
+                        <li>✓ 2 países envolvidos (Brasil e Indonésia)</li>
+                        <li>✓ 2 estados brasileiros (Espírito Santo e Rio de Janeiro)</li>
+                        <li>✓ Centenas de transações ilegais identificadas</li>
+                    </ul>
+                </div>
+
+                <h2>Próximos Passos e Nova Operação</h2>
+                <p>
+                    A Polícia Federal informou que continuará monitorando as atividades do grupo e aguarda o retorno das autoridades indonésias sobre a extradição de Jefferson "Pino". Os demais investigados deverão prestar depoimentos periódicos enquanto o inquérito é finalizado.
+                </p>
+
+                <p>
+                    Com base nas evidências coletadas na Operação Limpa Faca, a PF já prepara uma <strong>segunda fase focada no contrabando de crustáceos</strong> que deve ser deflagrada nas próximas semanas, mirando a mesma estrutura criminosa nas regiões de Vitória e Macaé.
+                </p>
+
+                <p>
+                    O Ministério Público Federal já foi acionado e deverá apresentar denúncia formal contra todos os envolvidos. As penas somadas para contrabando internacional, lavagem de dinheiro e formação de organização criminosa podem chegar a <strong>15 anos de prisão</strong>.
+                </p>
+
+                <div class="footer-note">
+                    <p><strong>⚠️ AVISO:</strong> Esta é uma página de humor/sátira criada para fins de entretenimento entre amigos. Todos os nomes e situações são fictícios e qualquer semelhança com a realidade é mera coincidência (ou não 😄).</p>
+                </div>
+            </div>
+
+            <div class="share-section">
+                <h3>Compartilhe esta notícia:</h3>
+                <div class="share-buttons">
+                    <button class="share-btn whatsapp" onclick="shareWhatsApp()">📱 WhatsApp</button>
+                    <button class="share-btn facebook" onclick="shareFacebook()">👍 Facebook</button>
+                    <button class="share-btn twitter" onclick="shareTwitter()">🐦 Twitter</button>
+                    <button class="share-btn copy" onclick="copyLink()">🔗 Copiar Link</button>
+                </div>
+            </div>
+        </article>
+
+        <aside class="sidebar">
+            <div class="related-news">
+                <h3>Notícias Relacionadas</h3>
+                <div class="related-item">
+                    <p>🔍 Entenda como funcionam as quadrilhas de contrabando marítimo</p>
+                </div>
+                <div class="related-item">
+                    <p>💰 Lavagem de dinheiro: como criminosos ocultam origem ilícita de recursos</p>
+                </div>
+                <div class="related-item">
+                    <p>🦀 PF prepara segunda fase de operação focada em contrabando de crustáceos</p>
+                </div>
+                <div class="related-item">
+                    <p>⚖️ Especialista explica por que réus podem responder em liberdade</p>
+                </div>
+                <div class="related-item">
+                    <p>🌏 Indonésia: paraíso para foragidos brasileiros?</p>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Notícias ES - Todos os direitos reservados (ou não)</p>
+            <p class="disclaimer">Este site é uma sátira. Nenhum crime real foi cometido (esperamos).</p>
+        </div>
+    </footer>
+
+    <script>
+// Update date and time
+function updateDateTime() {
+    const now = new Date();
+    const options = { 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+    };
+    const dateTimeString = now.toLocaleDateString('pt-BR', options);
+    document.getElementById('datetime').textContent = dateTimeString;
+}
+
+// Share functions
+function shareWhatsApp() {
+    const url = window.location.href;
+    const text = '🚨 URGENTE: Polícia Federal desarticula quadrilha de contrabando de facas em Vitória! Confira: ';
+    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(text + url)}`;
+    window.open(whatsappUrl, '_blank');
+}
+
+function shareFacebook() {
+    const url = window.location.href;
+    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+    window.open(facebookUrl, '_blank', 'width=600,height=400');
+}
+
+function shareTwitter() {
+    const url = window.location.href;
+    const text = '🚨 Polícia Federal desarticula quadrilha de contrabando de facas em Vitória!';
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+    window.open(twitterUrl, '_blank', 'width=600,height=400');
+}
+
+function copyLink() {
+    const url = window.location.href;
+    
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(() => {
+            alert('✅ Link copiado para a área de transferência!');
+        }).catch(err => {
+            fallbackCopyToClipboard(url);
+        });
+    } else {
+        fallbackCopyToClipboard(url);
+    }
+}
+
+function fallbackCopyToClipboard(text) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+        document.execCommand('copy');
+        alert('✅ Link copiado para a área de transferência!');
+    } catch (err) {
+        alert('❌ Erro ao copiar o link. Por favor, copie manualmente: ' + text);
+    }
+    
+    document.body.removeChild(textArea);
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+    updateDateTime();
+    
+    // Update time every minute
+    setInterval(updateDateTime, 60000);
+    
+    // Add entrance animation to article
+    const article = document.querySelector('.news-article');
+    if (article) {
+        article.style.opacity = '0';
+        article.style.transform = 'translateY(20px)';
+        article.style.transition = 'opacity 0.5s, transform 0.5s';
+        
+        setTimeout(() => {
+            article.style.opacity = '1';
+            article.style.transform = 'translateY(0)';
+        }, 100);
+    }
+});
+
+// Easter egg: Konami code
+let konamiCode = [];
+const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+
+document.addEventListener('keydown', function(e) {
+    konamiCode.push(e.key);
+    konamiCode = konamiCode.slice(-10);
+    
+    if (konamiCode.join(',') === konamiSequence.join(',')) {
+        alert('🎉 Você descobriu o segredo! A quadrilha GWI Rifas de Faca agradece sua visita! 🔪😄');
+        konamiCode = [];
+    }
+});
+    </script>
+</body>
+</html>
